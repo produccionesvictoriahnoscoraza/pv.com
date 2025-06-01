@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Producciones Victoria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logoPRV.png" alt="Producciones Victoria" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#servicios">SERVICIOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#eventos">EVENTOS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="galeria.html">GALERÍA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">CONTACTO</a></li>
+                    <li class="nav-item social-icons">
+                        <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="nav-link"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PÁGINA DE GALERÍA -->
+    <header class="pagina-header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="page-title reveal-title">NUESTRA GALERÍA</h1>
+                    <p class="page-subtitle">Descubre nuestros proyectos más destacados en imágenes y videos</p>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- GALERÍA SECTION -->
+    <section class="galeria-section full-page">
+        <div class="container">
+            <!-- Filtros de Galería -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="galeria-filtros">
+                        <button class="filtro-btn active" data-filter="*">Todos</button>
+                        <button class="filtro-btn" data-filter=".imagen">Imágenes</button>
+                        <button class="filtro-btn" data-filter=".video">Videos</button>
+                       
+                </div>
+            </div>
+            
+            <!-- Contenedor de Galería -->
+            <div class="row galeria-contenedor">
+                <!-- Elemento 1: Video -->
+                <div class="col-lg-4 col-md-6 galeria-item video escenarios">
+                    <div class="galeria-card">
+                        <div class="galeria-media">
+                            <video poster="video/videoproduccionesvictoria1.mp4" data-video-src="video/videoproduccionesvictoria1.mp4">
+                                <source src="video/videoproduccionesvictoria1.mp4" type="video/mp4">
+                            </video>
+                            <div class="galeria-overlay">
+                                <div class="galeria-info">
+                                    <h4>Video en Carnaval de San José Teacalco</h4>
+                                    <p></p>
+                                    <a href="video/videoproduccionesvictoria1.mp4" class="galeria-link" data-type="video">
+                                        <i class="fas fa-play-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Elemento 2: Imagen -->
+                <div class="col-lg-4 col-md-6 galeria-item imagen audio">
+                    <div class="galeria-card">
+                        <div class="galeria-media">
+                            <img src="img/produccionesvictoriaescenario1.jpeg" alt="escenarioproduccionesvictoria">
+                            <div class="galeria-overlay">
+                                <div class="galeria-info">
+                                    <h4></h4>
+                                    <p></p>
+                                    <a href="img/produccionesvictoriaescenario1.jpeg" class="galeria-link" data-type="imagen">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 galeria-item imagen audio">
+                    <div class="galeria-card">
+                        <div class="galeria-media">
+                            <img src="img/escenarioproduccionesvictoria6.jpg" alt="escenarioproduccionesvictoria">
+                            <div class="galeria-overlay">
+                                <div class="galeria-info">
+                                    <h4></h4>
+                                    <p></p>
+                                    <a href="img/escenarioproduccionesvictoria6.jpg" class="galeria-link" data-type="imagen">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6 galeria-item imagen audio">
+                    <div class="galeria-card">
+                        <div class="galeria-media">
+                            <img src="img/escenarioproduccionesvictoria2.jpg" alt="escenarioproduccionesvictoria">
+                            <div class="galeria-overlay">
+                                <div class="galeria-info">
+                                    <h4></h4>
+                                    <p></p>
+                                    <a href="img/escenarioproduccionesvictoria2.jpg" class="galeria-link" data-type="imagen">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 galeria-item imagen audio">
+                    <div class="galeria-card">
+                        <div class="galeria-media">
+                            <img src="img/escenarioproduccionesvictoria3.jpg" alt="escenarioproduccionesvictoria">
+                            <div class="galeria-overlay">
+                                <div class="galeria-info">
+                                    <h4></h4>
+                                    <p></p>
+                                    <a href="img/escenarioproduccionesvictoria3.jpg" class="galeria-link" data-type="imagen">
+                                        <i class="fas fa-search-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Elemento 2: Video -->
+                    <div class="col-lg-4 col-md-6 galeria-item video escenarios">
+                        <div class="galeria-card">
+                            <div class="galeria-media">
+                                <video poster="video/sonidolachangacolaboracion.mp4" data-video-src="video/colaboracionsonidolachangayproduccionesvictoria.mp4">
+                                    <source src="video/sonidolachangacolaboracion.mp4" type="video/mp4">
+                                </video>
+                                <div class="galeria-overlay">
+                                    <div class="galeria-info">
+                                        <h4>Colaboracion con Sonido La Changa</h4>
+                                        <p></p>
+                                        <a href="video/sonidolachangacolaboracion.mp4" class="galeria-link" data-type="video">
+                                            <i class="fas fa-play-circle"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                
+              
+                
+              
+        
+            </div>
+        </div>
+
+        
+            </div>
+        </div>
+    </section>
+
+     <!-- FOOTER -->
+     <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-info">
+                        <img src="img/logoPRV.png" alt="Producciones Victoria" class="footer-logo">
+                        <p>Expertos en producción de eventos, ofreciendo soluciones integrales de audio, iluminación, escenarios y más.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#eventos">Eventos</a></li>
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="galeria.html">Galería</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-contact">
+                        <h4>Contáctanos</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> San Martin Texmelucan,Puebla,Mex</p>
+                        <p><i class="fas fa-phone"></i> +52 248 240 7108</p>
+                        <p><i class="fas fa-phone"></i> +52 248 226 8491</p>
+                        <p><i class="fas fa-envelope"></i> hermanoscoraza06@gmail.com</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    &copy; <span id="current-year">2023</span> Producciones Victoria. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 

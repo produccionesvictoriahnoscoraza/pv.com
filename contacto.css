@@ -1,0 +1,675 @@
+/* Estilos para la página de contacto */
+
+/* Header específico */
+.contacto-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('img/contacto-header.jpg') center/cover no-repeat;
+}
+
+/* Sección de información de contacto */
+.contacto-info-section {
+    padding: 80px 0 40px;
+    background: linear-gradient(to bottom, #121212, #1a1a1a);
+}
+
+.contacto-info-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-info-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(230, 39, 76, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.info-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(230, 39, 76, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: #e6274c;
+    transition: all 0.3s ease;
+}
+
+.contacto-info-card:hover .info-icon {
+    background-color: #e6274c;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.contacto-info-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contacto-info-card p {
+    color: #bbb;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Sección del Cotizador */
+.cotizador-section {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+    position: relative;
+    overflow: hidden;
+}
+
+.cotizador-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(230, 39, 76, 0.1), transparent 40%);
+    pointer-events: none;
+}
+
+.cotizador-wrapper {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cotizador-tabs {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cotizador-tab {
+    padding: 20px;
+    flex: 1;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+}
+
+.cotizador-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #e6274c;
+    transition: width 0.3s ease;
+}
+
+.cotizador-tab:hover {
+    color: #fff;
+}
+
+.cotizador-tab.active {
+    color: #fff;
+    font-weight: 600;
+}
+
+.cotizador-tab.active::after {
+    width: 100%;
+}
+
+.cotizador-content {
+    padding: 40px;
+    position: relative;
+}
+
+.cotizador-panel {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.cotizador-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cotizador-panel-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.cotizador-panel-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #e6274c;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Estilos para los checkboxes personalizados */
+.custom-checkbox {
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox .form-check-input {
+    display: none;
+}
+
+.custom-checkbox .form-check-label {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox .form-check-label:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(230, 39, 76, 0.3);
+    transform: translateY(-3px);
+}
+
+.custom-checkbox .form-check-input:checked + .form-check-label {
+    background: rgba(230, 39, 76, 0.15);
+    border-color: rgba(230, 39, 76, 0.5);
+    box-shadow: 0 10px 20px rgba(230, 39, 76, 0.15);
+}
+
+.checkbox-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(230, 39, 76, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e6274c;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.custom-checkbox .form-check-input:checked + .form-check-label .checkbox-icon {
+    background: #e6274c;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.checkbox-text {
+    flex: 1;
+}
+
+.checkbox-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.checkbox-desc {
+    color: #aaa;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* Navegación del cotizador */
+.cotizador-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cotizador-nav button {
+    min-width: 120px;
+}
+
+/* Formularios flotantes personalizados */
+.form-floating > .form-control,
+.form-floating > .form-select {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #e6274c;
+    box-shadow: 0 0 0 0.25rem rgba(230, 39, 76, 0.25);
+}
+
+.form-floating > .form-control::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.form-floating > label {
+    color: #aaa;
+}
+
+/* Resultado de la cotización */
+.resultado-cotizacion {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.resultado-header {
+    background: rgba(230, 39, 76, 0.15);
+    padding: 20px;
+    border-bottom: 1px solid rgba(230, 39, 76, 0.2);
+}
+
+.resultado-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.resultado-info {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0;
+}
+
+.resultado-logo .small-v {
+    width: 60px;
+    height: 60px;
+}
+
+.resultado-logo .small-v .v-text {
+    font-size: 2.5rem;
+}
+
+.resultado-body {
+    padding: 30px 20px;
+}
+
+.servicios-seleccionados {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+.servicios-seleccionados li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.servicios-seleccionados li span:first-child {
+    color: #aaa;
+}
+
+.servicios-seleccionados li span:last-child {
+    font-weight: 600;
+}
+
+.resultado-detalle {
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 20px;
+}
+
+.resultado-item {
+    margin-bottom: 15px;
+}
+
+.resultado-item span {
+    color: #aaa;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.resultado-item strong {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.resultado-total {
+    padding: 15px 0;
+}
+
+.resultado-nota {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.resultado-nota i {
+    color: #e6274c;
+    margin-right: 5px;
+}
+
+.resultado-precio {
+    text-align: right;
+}
+
+.resultado-precio span {
+    display: block;
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.resultado-precio strong {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #e6274c;
+}
+
+.resultado-footer {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.resultado-footer p {
+    color: #aaa;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Sección de formulario de contacto */
+.contacto-form-section {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #0d0d0d, #121212);
+    position: relative;
+}
+
+.contacto-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(230, 39, 76, 0.1), transparent 40%);
+    pointer-events: none;
+}
+
+.contacto-form-img-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+.contacto-form-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.img-overlay-text h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.img-overlay-text h3:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #e6274c;
+}
+
+.img-overlay-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.img-overlay-text ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.img-overlay-text ul li i {
+    color: #e6274c;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contacto-form-container {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-select:focus ~ label {
+    color: #e6274c;
+}
+
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select:not([value=""]):valid ~ label {
+    color: #aaa;
+}
+
+.form-check-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.form-check-input:checked {
+    background-color: #e6274c;
+    border-color: #e6274c;
+}
+
+.form-check-label {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Sección del mapa */
+.mapa-section {
+    position: relative;
+}
+
+.map-container {
+    position: relative;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.contact-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    width: 300px;
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.contact-card h3 i {
+    color: #e6274c;
+    margin-right: 10px;
+}
+
+.contact-card p {
+    color: #bbb;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .cotizador-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .cotizador-tab {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .cotizador-content {
+        padding: 30px 20px;
+    }
+    
+    .contact-overlay {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        margin-top: -100px;
+        margin-bottom: 30px;
+        z-index: 10;
+    }
+    
+    .contact-card {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-info-section {
+        padding: 60px 0 30px;
+    }
+    
+    .cotizador-section,
+    .contacto-form-section {
+        padding: 70px 0;
+    }
+    
+    .img-overlay-text {
+        padding: 20px;
+    }
+    
+    .img-overlay-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .img-overlay-text ul li {
+        font-size: 1rem;
+    }
+    
+    .contacto-form-container {
+        padding: 30px 20px;
+    }
+    
+    .resultado-precio strong {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cotizador-tab {
+        font-size: 0.8rem;
+        padding: 12px 8px;
+    }
+    
+    .cotizador-panel-title {
+        font-size: 1.4rem;
+    }
+    
+    .checkbox-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .checkbox-title {
+        font-size: 1rem;
+    }
+    
+    .resultado-header,
+    .resultado-body,
+    .resultado-footer {
+        padding: 15px;
+    }
+    
+    .resultado-title {
+        font-size: 1.2rem;
+    }
+    
+    .img-overlay-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .img-overlay-text ul li {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+} 
